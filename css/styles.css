@@ -2,27 +2,26 @@
 
 body{
     background-color: #181818;
-    margin:0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 2em;
+    height: 100vh;
+    padding-top: 5em;
     color: #fff;
 }
 
-header{
-    padding-top: 5em;
+h4, a{
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 100;
 }
 
-header h4, .contact-bar a{
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 100;
+header, main, footer{
+  display: flex;
 }
 
-/* DEMO-SPECIFIC STYLES */
-.typewriter h1 {
+/* animated typewriter */
+.header h1 {
     color: #fff;
     font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* font-family: 'Catamaran', sans-serif; */
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -44,6 +43,7 @@ header h4, .contact-bar a{
     from, to { border-color: transparent }
     50% { border-color: orange }
   }
+/* end of animated typewriter */
 
   .contact-bar {
       padding: 0;
@@ -71,7 +71,12 @@ header h4, .contact-bar a{
     color: #7c7c7c;
     text-decoration: none;
   }
-  .contact-bar a:visited {
-    color: #08bddd;
+
+
+  #height {
+    height: 60%;
   }
 
+  main {
+    background-color: hotpink;
+  }
