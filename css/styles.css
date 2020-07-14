@@ -78,7 +78,8 @@ header, main, footer{
   }
 
   main {
-    flex-direction: column;;
+    flex-direction: column;
+    padding-bottom: 0;
   }
 
   main h4 {
@@ -89,10 +90,6 @@ header, main, footer{
     padding: 0.75em;
     font-size: 0.845em;
     margin-bottom: 0.35em;
-  }
-
-  main section:last-child{
-    margin-bottom: 0;
   }
 
   main section a, footer a {
@@ -107,11 +104,47 @@ header, main, footer{
   }
   .hlx{
     background-color: #903749;
+    font-size: 0.75em;
   }
   .and{
     background-color: #53354a;
+    font-size: 0.75em;
+  }
+
+  .skl{
+    padding: 0;
+    background-color: #333333;
+    margin-bottom: 0.85em;
   }
 
   .right{
     float:right;
+  }
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .header h1{
+      font-size: 2.8em;
+    }
+    h4{
+      font-size: 1.65em;
+    }
+    .psb, .tsk, .hlx, .and, .skl, .contact-bar{
+      font-size: 1.2em;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    header, main, footer{
+      padding: 8em;
+    }
+    
+    #height {
+      height: 20%;
+    }
+
+    main{
+      padding-bottom: 1.5em;
+    }
   }
