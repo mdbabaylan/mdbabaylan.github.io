@@ -1,153 +1,200 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400&display=swap');
 
-body{
-    background-color: #181818;
-    margin: 0;
-    height: 100vh;
-    padding-top: 5em;
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  background-color: #181818;
+  margin: 0;
+  height: 100vh;
+  padding-top: 5em;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-h4, h5{
+h4,
+h5 {
   font-family: 'Catamaran', sans-serif;
   font-weight: 100;
 }
 
-header, main, footer{
+header,
+main,
+footer {
   padding: 2em;
   display: flex;
 }
 
 /* animated typewriter */
 .header h1 {
-    font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0.015em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
+  font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+  /* overflow-wrap: break-word; */
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.015em;
+  /* Adjust as needed */
+  animation:
+    typing 4.2s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
   }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+
+  to {
+    width: 100%
   }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
   }
+
+  50% {
+    border-color: orange
+  }
+}
+
 /* end of animated typewriter */
 
+.contact-bar {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  animation: cssAnimation 0s 3.65s forwards;
+  opacity: 0;
+}
+
+@keyframes cssAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.contact-bar li {
+  flex: 0 0 4em;
+  text-align: start;
+}
+
+.contact-bar li:nth-child(2) {
+  margin-left: -1em;
+}
+
+.contact-bar a {
+  color: #7c7c7c;
+  text-decoration: none;
+}
+
+
+#height {
+  height: 35%;
+}
+
+main {
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+main h4 {
+  margin: 0.5em 0;
+}
+
+main section {
+  padding: 0.75em;
+  font-size: 0.845em;
+  margin-bottom: 0.35em;
+}
+
+main section a,
+footer a {
+  color: #fff;
+}
+
+.bp {
+  background-color: #03a340;
+
+}
+
+.cp {
+  background-color: #37636e;
+}
+
+.psb {
+  background-color: #2b2e4a;
+}
+
+.tsk {
+  background-color: #e84545;
+}
+
+.hlx {
+  background-color: #903749;
+  font-size: 0.75em;
+}
+
+.and {
+  background-color: #53354a;
+  font-size: 0.75em;
+}
+
+.skl {
+  padding: 0;
+  background-color: #333333;
+  margin-bottom: 0.85em;
+}
+
+.right {
+  float: right;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* For tablets: */
+  .header h1 {
+    font-size: 2.8em;
+  }
+
+  h4 {
+    font-size: 1.65em;
+  }
+
+  .bp,
+  .cp,
+  .psb,
+  .tsk,
+  .hlx,
+  .and,
+  .skl,
   .contact-bar {
-      padding: 0;
-      list-style-type: none;
-      display:flex;
-      justify-content: start;
-      animation: cssAnimation 0s 3.65s forwards;
-      opacity: 0;
+    font-size: 1.4em;
   }
+}
 
-  @keyframes cssAnimation {
-    to   { opacity: 1; }
+@media only screen and (min-width: 768px) {
+
+  /* For desktop: */
+  header,
+  main,
+  footer {
+    padding: 8em;
   }
-
-  .contact-bar li{
-    flex: 0 0 4em;
-    text-align: start;
-  }
-
-  .contact-bar li:nth-child(2){
-    margin-left: -1em;
-  }
-
-  .contact-bar a {
-    color: #7c7c7c;
-    text-decoration: none;
-  }
-
 
   #height {
-    height: 35%;
+    height: 20%;
   }
 
   main {
-    flex-direction: column;
-    padding-bottom: 0;
+    padding-bottom: 1.5em;
   }
-
-  main h4 {
-    margin: 0.5em 0;
-  }
-
-  main section{
-    padding: 0.75em;
-    font-size: 0.845em;
-    margin-bottom: 0.35em;
-  }
-
-  main section a, footer a {
-    color: #fff;
-  }
-
-  .cp{
-    background-color: #37636e;
-  }
-  .psb{
-    background-color: #2b2e4a;
-  }
-  .tsk{
-    background-color: #e84545;
-  }
-  .hlx{
-    background-color: #903749;
-    font-size: 0.75em;
-  }
-  .and{
-    background-color: #53354a;
-    font-size: 0.75em;
-  }
-
-  .skl{
-    padding: 0;
-    background-color: #333333;
-    margin-bottom: 0.85em;
-  }
-
-  .right{
-    float:right;
-  }
-
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .header h1{
-      font-size: 2.8em;
-    }
-    h4{
-      font-size: 1.65em;
-    }
-    .cp, .psb, .tsk, .hlx, .and, .skl, .contact-bar{
-      font-size: 1.2em;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    header, main, footer{
-      padding: 8em;
-    }
-    
-    #height {
-      height: 20%;
-    }
-
-    main{
-      padding-bottom: 1.5em;
-    }
-  }
+}
